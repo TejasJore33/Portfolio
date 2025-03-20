@@ -94,10 +94,12 @@ a{
 
 .ex{
   width: 900px;
+  margin-top: 60px;
+
 }
 .ex-items {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   background-color: var(--bg-color);
   margin: 20px;
   align-items: center;
@@ -112,6 +114,7 @@ a{
 /*skills*/
 
 .skills{
+  margin-top: 60px;
   width: 900px;
 }
 
@@ -141,6 +144,7 @@ box-shadow: var(--box-shadow);
 
 /* Contact */
 .contact-icon{
+  margin-top: -50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,4 +172,23 @@ box-shadow: var(--box-shadow);
 .contact-icon .items .icon{
   font-size: 2rem;
 
+}
+
+/* Education */
+
+.edu{
+  width: 900px;
+  margin-top: 60px;
+}
+.edu .education {
+  display: inline-block;
+  justify-content:space-between;
+  background-color: var(--bg-color);
+  margin: 20px;
+  align-items: center;
+  width: 800px;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid yellow;
+  box-shadow: var(--box-shadow);
 }

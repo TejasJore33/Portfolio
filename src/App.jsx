@@ -8,6 +8,7 @@ import Contact from './components/Contact'
 import Aos from "aos";
 import "aos/dist/aos.css"
 import './App.css'
+import Education from './components/Education'
 
 const App =()=> {
   
@@ -19,9 +20,10 @@ useEffect(()=>{
       <Navbar/>
       <div className="container">
       <Home/>
-      <Experience/>
-      <Skills/>
       <Project/>
+      <Skills/>
+      <Experience/>
+      <Education/>
       <Contact/>
       </div>
       
