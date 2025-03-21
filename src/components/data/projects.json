@@ -10,7 +10,7 @@
   {
     "key": 2,
     "title": "Personal-Portfolio",
-    "imageSrc": "https://cdn.pixabay.com/photo/2017/05/02/15/30/streets-2278471_640.jpg",
+    "imageSrc": "https://tejasjoredev.vercel.app/assets/hero/hero.avif",
     "description": "A portfolio crafted and developed by me, showcasing my skills, projects, and passion for Software development",
     "demo": "https://tejasjoredev.vercel.app/",
     "source": "https://github.com/TejasJore33/Portfolio"
