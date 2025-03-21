@@ -29,10 +29,10 @@ const Porjects = () => {
                   <div className="card-body text-center">
                     <h5 className="card-title">{data.title}</h5>
                     <p className="card-text">{data.description}</p>
-                    <a href={data.demo} className="btn btn-primary mx-3">
+                    <a href={data.demo} target="_blank" className="btn btn-primary mx-3">
                       Demo
                     </a>
-                    <a href={data.source} className="btn btn-warning">
+                    <a href={data.source} target="_blank" className="btn btn-warning">
                       Code
                     </a>
                   </div>
