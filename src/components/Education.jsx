@@ -3,12 +3,12 @@ import React from "react";
 const Education = () => {
   return (
     <>
-      <div className="container edu "data-aos="zoom-in">
+      <div className="container edu "data-aos="zoom-in" id="Education">
         <h1>EDUCATION</h1>
         <div className="education ">
           <div>
             <h3>Master's In Computer Applications</h3>
-            <p>Genba Sopanrao Moze College Of Engineering Balewadi Pune.</p>
+            <h5>Genba Sopanrao Moze College Of Engineering Balewadi Pune.</h5>
           </div>
 
           <br />
