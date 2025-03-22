@@ -99,7 +99,7 @@ a {
 
 .ex-items {
   display: flex;
-  justify-content: space-evenly;
+  justify-content:center;
   background-color: var(--bg-color);
   margin: 20px;
   align-items: center;
@@ -223,14 +223,25 @@ a {
   box-shadow: var(--box-shadow);
 }
 
-/* Media Queries for Mobile Compatibility */
+/* Responsive Design */
 @media only screen and (max-width: 1024px) {
   .home {
     flex-direction: column; /* Stack home sections on tablets */
+    align-items: center; /* Ensure home sections are centered */
+    text-align: center; /* Center text inside the home section */
   }
 
   .home .left {
     width: 90%; /* Adjust width for smaller screens */
+    margin-bottom: 20px; /* Add spacing below the left section */
+    padding: 20px; /* Adjust padding for better spacing */
+  }
+
+  .home .right {
+    width: 90%; /* Adjust width for smaller screens */
+    display: flex;
+    justify-content: center; /* Center the image */
+    align-items: center;
   }
 
   .nav_bar {
@@ -246,10 +257,12 @@ a {
   .ex-items {
     flex-direction: column; /* Stack items in the experience section */
     width: 90%; /* Adjust width */
+    margin: 0 auto; /* Center experience items */
   }
 
   .skills .items .item {
     width: calc(50% - 40px); /* Adjust items to fit two columns */
+    margin-bottom: 20px; /* Add spacing between items */
   }
 
   .contact-icon .items {
@@ -264,12 +277,22 @@ a {
 
 @media only screen and (max-width: 768px) {
   .home {
-    flex-direction: column; /* Stack home sections on mobile */
+    flex-direction: column; 
+    margin-top: 100px;/* Stack home sections on mobile */
+    align-items: center; /* Center content */
   }
 
   .home .left {
     width: 90%; /* Adjust left section for mobile */
     margin-bottom: 20px; /* Add spacing between sections */
+    padding: 20px;
+  }
+
+  .home .right {
+    width: 90%; /* Adjust right section for mobile */
+    display: flex;
+    justify-content: center; /* Center image */
+    align-items: center;
   }
 
   .nav_bar .nav_items {
@@ -280,10 +303,12 @@ a {
   .ex-items {
     flex-direction: column; /* Stack experience items */
     width: 90%; /* Adjust width */
+    margin: 0 auto; /* Center experience items */
   }
 
   .skills .items .item {
     width: calc(50% - 40px); /* Adjust items to fit two columns */
+    margin-bottom: 20px; /* Add spacing between items */
   }
 
   .contact-icon .items {
