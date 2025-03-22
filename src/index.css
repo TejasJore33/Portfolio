@@ -1,43 +1,44 @@
-:root{
-  --box-shadow:5px 5px 10px 10px rgba(101,175,10,0.5);
-  --bg-color:rgb(40,47,97);
+:root {
+  --box-shadow: 5px 5px 10px 10px rgba(101, 175, 10, 0.5);
+  --bg-color: rgb(40, 47, 97);
 }
 
-
-body{
+body {
   background-color: rgb(11, 26, 51);
   color: white;
 }
 
-a{
+a {
   text-decoration: none;
   color: white;
 }
 
-.nav_bar{
+.nav_bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
-.nav_bar .nav_items{
+.nav_bar .nav_items {
   padding: 16px;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-.nav_bar .nav_items:hover{
+.nav_bar .nav_items:hover {
   border-bottom: 3px solid yellow;
 }
 
-
-.home{
+.home {
   height: 80vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allow stacking on smaller screens */
 }
-.home .left{
+
+.home .left {
   background-color: var(--bg-color);
   width: 620px;
   text-align: center;
@@ -47,13 +48,13 @@ a{
   box-shadow: var(--box-shadow);
 }
 
-.home .right .img{
+.home .right .img {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.home .right .img img{
+.home .right .img img {
   height: 270px;
   width: 270px;
   border: 5px solid yellow;
@@ -63,96 +64,126 @@ a{
   animation-iteration-count: infinite;
 }
 
-@keyframes superman{
-  0%{
+@keyframes superman {
+  0% {
     border-color: blue;
-    transform: translate(0,px);
+    transform: translate(0, px);
     box-shadow: 10px 10px 100px 50px blue;
   }
-  25%{
+  25% {
     border-color: rgb(239, 244, 11);
-    transform: translate(0,10px);
+    transform: translate(0, 10px);
     box-shadow: 10px 10px 100px 50px rgb(239, 244, 11);
   }
-  50%{
-    border-color: rgb(12,12, 199);
-    transform: translate(0,10px);
-    box-shadow: 10px 10px 100px 50px rgb(12,12, 199);
+  50% {
+    border-color: rgb(12, 12, 199);
+    transform: translate(0, 10px);
+    box-shadow: 10px 10px 100px 50px rgb(12, 12, 199);
   }
-  75%{
-    border-color: rgb(130,217, 160);
-    box-shadow: 10px 10px 100px 50px rgb(130,217, 160);
+  75% {
+    border-color: rgb(130, 217, 160);
+    box-shadow: 10px 10px 100px 50px rgb(130, 217, 160);
   }
-  100%{
-    border-color: rgb(50,55, 205);
-    transform: translate(0,-0px);
-    box-shadow: 10px 10px 100px 50px rgb(50,55, 205);
+  100% {
+    border-color: rgb(50, 55, 205);
+    transform: translate(0, -0px);
+    box-shadow: 10px 10px 100px 50px rgb(50, 55, 205);
   }
 }
 
-/*  expereence  */
-
-.ex{
-  width: 900px;
+/* Experience Section */
+.ex {
+  width: 100%;
   margin-top: 60px;
-
 }
+
 .ex-items {
   display: flex;
   justify-content: space-evenly;
   background-color: var(--bg-color);
   margin: 20px;
   align-items: center;
-  width: 800px;
+  width: 100%;
   padding: 30px;
   border-radius: 10px;
   border: 1px solid yellow;
   box-shadow: var(--box-shadow);
+  flex-wrap: wrap; /* Allow items to wrap on small screens */
 }
 
+.ex-items .item {
+  width: calc(33.33% - 40px); /* Adjust item width for larger screens */
+  margin: 10px;
+}
 
-/*skills*/
+@media only screen and (max-width: 1024px) {
+  /* Adjust Experience Section for tablets */
+  .ex-items .item {
+    width: calc(50% - 40px); /* Adjust to fit two items in a row */
+  }
+}
 
-.skills{
+@media only screen and (max-width: 768px) {
+  /* Adjust Experience Section for mobile devices */
+  .ex-items .item {
+    width: calc(100% - 40px); /* Stack items on smaller screens */
+  }
+}
+
+/* Skills Section */
+.skills {
   margin-top: 60px;
-  width: 900px;
+  width: 100%;
 }
 
-.skills .items{
+.skills .items {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin: auto;
-
 }
 
-.skills .items .item{
-width: calc(33.33%);
-background-color: black;
-margin: 20px;
-text-align: center;
-padding: 20px;
-border-radius: 10px;
-border: 1px solid yellow;
-box-shadow: var(--box-shadow);
+.skills .items .item {
+  width: calc(33.33% - 40px); /* Adjust item width for larger screens */
+  background-color: black;
+  margin: 20px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid yellow;
+  box-shadow: var(--box-shadow);
 }
 
-.skills .items .item .img{
+.skills .items .item .img {
   width: 70px;
 }
 
-/* Contact */
-.contact-icon{
+@media only screen and (max-width: 1024px) {
+  /* Adjust Skills Section for tablets */
+  .skills .items .item {
+    width: calc(50% - 40px); /* Adjust to fit two items in a row */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Adjust Skills Section for mobile devices */
+  .skills .items .item {
+    width: calc(100% - 40px); /* Stack items on smaller screens */
+  }
+}
+
+/* Contact Section */
+.contact-icon {
   margin-top: -50px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 30vh;
+  flex-wrap: wrap; /* Stack icons on smaller screens */
 }
 
-
-.contact-icon .items{
+.contact-icon .items {
   background-color: black;
   margin: 10px;
   height: 70px;
@@ -164,31 +195,134 @@ box-shadow: var(--box-shadow);
   border: 2px solid yellow;
 }
 
-.contact-icon .items:hover{
+.contact-icon .items:hover {
   background-color: var(--bg-color);
   box-shadow: var(--box-shadow);
 }
 
-.contact-icon .items .icon{
+.contact-icon .items .icon {
   font-size: 2rem;
-
 }
 
-/* Education */
-
-.edu{
-  width: 900px;
+/* Education Section */
+.edu {
+  width: 100%;
   margin-top: 60px;
 }
+
 .edu .education {
   display: inline-block;
-  justify-content:space-between;
+  justify-content: space-between;
   background-color: var(--bg-color);
   margin: 20px;
   align-items: center;
-  width: 800px;
+  width: 100%;
   padding: 30px;
   border-radius: 10px;
   border: 1px solid yellow;
   box-shadow: var(--box-shadow);
+}
+
+/* Media Queries for Mobile Compatibility */
+@media only screen and (max-width: 1024px) {
+  .home {
+    flex-direction: column; /* Stack home sections on tablets */
+  }
+
+  .home .left {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .nav_bar {
+    flex-direction: column; /* Stack navigation items vertically on smaller screens */
+    align-items: center;
+  }
+
+  .nav_bar .nav_items {
+    padding: 10px;
+    font-size: 1rem; /* Adjust font size for smaller devices */
+  }
+
+  .ex-items {
+    flex-direction: column; /* Stack items in the experience section */
+    width: 90%; /* Adjust width */
+  }
+
+  .skills .items .item {
+    width: calc(50% - 40px); /* Adjust items to fit two columns */
+  }
+
+  .contact-icon .items {
+    height: 50px;
+    width: 50px; /* Adjust contact icons size */
+  }
+
+  .edu .education {
+    width: 90%; /* Adjust education section width */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    flex-direction: column; /* Stack home sections on mobile */
+  }
+
+  .home .left {
+    width: 90%; /* Adjust left section for mobile */
+    margin-bottom: 20px; /* Add spacing between sections */
+  }
+
+  .nav_bar .nav_items {
+    padding: 8px;
+    font-size: 1rem; /* Adjust font size for mobile */
+  }
+
+  .ex-items {
+    flex-direction: column; /* Stack experience items */
+    width: 90%; /* Adjust width */
+  }
+
+  .skills .items .item {
+    width: calc(50% - 40px); /* Adjust items to fit two columns */
+  }
+
+  .contact-icon .items {
+    height: 50px;
+    width: 50px; /* Smaller icons on mobile */
+  }
+
+  .edu .education {
+    width: 90%; /* Adjust education section width */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .nav_bar .nav_items {
+    padding: 8px;
+    font-size: 0.9rem; /* Further reduce font size for very small screens */
+  }
+
+  .home .left {
+    width: 100%; /* Full width on very small screens */
+    padding: 20px;
+  }
+
+  .home .right .img img {
+    height: 200px;
+    width: 200px; /* Adjust image size */
+  }
+
+  .skills .items .item {
+    width: 100%; /* Stack skill items on very small screens */
+    margin: 10px 0; /* Add margin for spacing */
+  }
+
+  .contact-icon .items {
+    height: 40px;
+    width: 40px; /* Smaller icons */
+  }
+
+  .ex-items {
+    width: 100%; /* Full width experience section */
+  }
 }
