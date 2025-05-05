@@ -14,5 +14,13 @@
     "description": "A portfolio crafted and developed by me, showcasing my skills, projects, and passion for Software development",
     "demo": "https://tejasjoredev.vercel.app/",
     "source": "https://github.com/TejasJore33/Portfolio"
+  },
+  {
+    "key": 3,
+    "title": "Aalandi Survey",
+    "imageSrc": "https://tejasjoredev.vercel.app/assets/hero/hero.avif",
+    "description": "A portfolio created to take a survey of aalandi municipal corporation",
+    "demo": "https://aalandimcp.vercel.app/",
+    "source": "https://github.com/TejasJore33/mcp"
   }
 ]
