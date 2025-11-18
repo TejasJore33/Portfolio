@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import pdf from '../pdf/TejasJore-Resume.pdf';  // Ensure this path is correct
+import pdf from '../pdf/Tejas_Jore_9730277210.pdf';  // Ensure this path is correct
 import hero from './data/hero.json'; // Make sure hero.json contains the 'imgSrc' key
 import Typed from "typed.js";
 
